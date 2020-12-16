@@ -9,9 +9,9 @@
 </template>
 
 <script>
-	export default {
-	    name:'Home',
-	}
+    export default {
+        name:'Home',
+    }
 </script>
 
 
@@ -23,8 +23,8 @@
 
         .logo{
             width: 200px;
-            margin-top: 25px;
-            margin-bottom: 25px;
+            margin-top: 35px;
+            margin-bottom: 35px;
         }
 
         .container-thin{

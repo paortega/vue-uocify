@@ -8,6 +8,10 @@ body {
 	font-size: 16px;
     max-width:100%;
     background: $bg-color;
+
+    @media #{$max-sm} {
+        font-size: 14px;
+    }        
 }
 
 
@@ -23,6 +27,9 @@ main{
     padding-top: 120px;
     height: 100%;
     flex:1;
+    @media #{$max-sm} {
+        padding-top: 100px;
+    }    
 }
 
 .alink{
@@ -36,12 +43,27 @@ main{
     }
 }
 
+.aright{
+    text-align: right;
+}
+
 .color-red{
     color: $red;
 }
 
 .color-green{
     color: $green;
+}
+
+.visibility-hidden{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
 
 // titles
@@ -53,11 +75,20 @@ main{
 .main-title{
     font-size: 32px;
     margin-bottom: 15px;
+
+    @media #{$max-sm} {
+        font-size: 27px;
+        line-height: 1.3em;
+    }    
 }
 
 .title{
     font-size: 28px;
     margin-bottom: 10px;
+
+    @media #{$max-sm} {
+        font-size: 18px;
+    }      
 }
 
 
@@ -91,4 +122,82 @@ main{
     }
 }
 
-// ... más estilos ...
+
+// table
+
+table{
+    thead{
+        th{
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: 15px 5px;
+            border-bottom-width: 1px;
+            font-size: 13px;
+        }
+    }
+
+    th,td{
+        font-size: 14px;
+        padding: 8px 5px;
+        vertical-align: middle;
+    }
+
+    td{
+        font-weight: 400;
+    }
+}
+
+
+// nav tabs
+
+.nav-tabs{
+    border-bottom: 0 !important;
+    margin:0 30px;
+    box-shadow: 0 2px 2px 0 rgba(13, 10, 44, 0.03); 
+
+    .nav-item{
+        margin-right: 25px;
+
+        .nav-link{
+            color: $text-color;
+            border: 0;
+            padding:15px 0;
+
+            &.active{
+                color: black;
+                font-weight: 600;
+                border-bottom: 2px solid $red;
+            }
+            &:hover{
+                border-bottom: 2px solid $red;
+                opacity:0.8;
+            }            
+        }
+    }
+
+    @media #{$max-sm} {
+        margin:0 20px;
+
+        .nav-item{
+            margin-right: 15px;
+            font-size: 14px;
+
+            .nav-link{
+                padding:12px 0;
+            }
+        }
+    }      
+}
+
+.tab-content{
+    padding: 30px;
+
+    .title{
+        margin-bottom: 20px;
+    }        
+
+
+    @media #{$max-sm} {
+        padding:20px;
+    }       
+}
